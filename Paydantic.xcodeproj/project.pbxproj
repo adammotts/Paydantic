@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C10C1952B3F5D35005A5B93 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1942B3F5D35005A5B93 /* Item.swift */; };
+		0C10C1972B3F5EE1005A5B93 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1962B3F5EE1005A5B93 /* Person.swift */; };
+		0C10C1A22B3F6991005A5B93 /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1A12B3F6991005A5B93 /* Bill.swift */; };
+		0C10C1AC2B40A31B005A5B93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1AB2B40A31B005A5B93 /* ViewController.swift */; };
+		0C10C1AE2B40A3BD005A5B93 /* PersonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1AD2B40A3BD005A5B93 /* PersonListView.swift */; };
+		0C10C1B02B40ABFB005A5B93 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1AF2B40ABFB005A5B93 /* PersonTableViewCell.swift */; };
+		0C10C1B32B40B284005A5B93 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1B22B40B284005A5B93 /* AddPersonViewController.swift */; };
+		0C10C1B62B40B33A005A5B93 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1B52B40B33A005A5B93 /* AddPersonView.swift */; };
 		0CB62FEB2B3D3CE4006B54E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */; };
 		0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */; };
-		0CB62FEF2B3D3CE4006B54E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEE2B3D3CE4006B54E3 /* ViewController.swift */; };
 		0CB62FF22B3D3CE4006B54E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB62FF02B3D3CE4006B54E3 /* Main.storyboard */; };
 		0CB62FF42B3D3CE6006B54E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB62FF32B3D3CE6006B54E3 /* Assets.xcassets */; };
 		0CB62FF72B3D3CE6006B54E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB62FF52B3D3CE6006B54E3 /* LaunchScreen.storyboard */; };
@@ -36,10 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C10C1942B3F5D35005A5B93 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0C10C1962B3F5EE1005A5B93 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		0C10C1A12B3F6991005A5B93 /* Bill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
+		0C10C1AB2B40A31B005A5B93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C10C1AD2B40A3BD005A5B93 /* PersonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListView.swift; sourceTree = "<group>"; };
+		0C10C1AF2B40ABFB005A5B93 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		0C10C1B22B40B284005A5B93 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		0C10C1B52B40B33A005A5B93 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
 		0CB62FE72B3D3CE4006B54E3 /* Paydantic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paydantic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CB62FEE2B3D3CE4006B54E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CB62FF12B3D3CE4006B54E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CB62FF32B3D3CE6006B54E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CB62FF62B3D3CE6006B54E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +90,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C10C1932B3F5CB6005A5B93 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1942B3F5D35005A5B93 /* Item.swift */,
+				0C10C1962B3F5EE1005A5B93 /* Person.swift */,
+				0C10C1A12B3F6991005A5B93 /* Bill.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		0C10C1AA2B40A272005A5B93 /* AddPerson */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1B22B40B284005A5B93 /* AddPersonViewController.swift */,
+				0C10C1B52B40B33A005A5B93 /* AddPersonView.swift */,
+			);
+			path = AddPerson;
+			sourceTree = "<group>";
+		};
+		0C10C1B42B40B2C4005A5B93 /* PersonList */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1AD2B40A3BD005A5B93 /* PersonListView.swift */,
+				0C10C1AF2B40ABFB005A5B93 /* PersonTableViewCell.swift */,
+				0C10C1AB2B40A31B005A5B93 /* ViewController.swift */,
+			);
+			path = PersonList;
+			sourceTree = "<group>";
+		};
 		0CB62FDE2B3D3CE4006B54E3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +142,11 @@
 		0CB62FE92B3D3CE4006B54E3 /* Paydantic */ = {
 			isa = PBXGroup;
 			children = (
+				0C10C1B42B40B2C4005A5B93 /* PersonList */,
+				0C10C1AA2B40A272005A5B93 /* AddPerson */,
+				0C10C1932B3F5CB6005A5B93 /* Types */,
 				0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */,
 				0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */,
-				0CB62FEE2B3D3CE4006B54E3 /* ViewController.swift */,
 				0CB62FF02B3D3CE4006B54E3 /* Main.storyboard */,
 				0CB62FF32B3D3CE6006B54E3 /* Assets.xcassets */,
 				0CB62FF52B3D3CE6006B54E3 /* LaunchScreen.storyboard */,
@@ -258,8 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CB62FEF2B3D3CE4006B54E3 /* ViewController.swift in Sources */,
+				0C10C1AC2B40A31B005A5B93 /* ViewController.swift in Sources */,
+				0C10C1972B3F5EE1005A5B93 /* Person.swift in Sources */,
+				0C10C1B32B40B284005A5B93 /* AddPersonViewController.swift in Sources */,
+				0C10C1AE2B40A3BD005A5B93 /* PersonListView.swift in Sources */,
+				0C10C1952B3F5D35005A5B93 /* Item.swift in Sources */,
 				0CB62FEB2B3D3CE4006B54E3 /* AppDelegate.swift in Sources */,
+				0C10C1A22B3F6991005A5B93 /* Bill.swift in Sources */,
+				0C10C1B62B40B33A005A5B93 /* AddPersonView.swift in Sources */,
+				0C10C1B02B40ABFB005A5B93 /* PersonTableViewCell.swift in Sources */,
 				0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
