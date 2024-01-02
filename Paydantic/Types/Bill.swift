@@ -14,11 +14,15 @@ class Bill {
     var subtotal: Double
     var total: Double
     
-    init(subtotal: Double, total: Double) {
+    init() {
         self.people = [Person]()
         self.items = [Item]()
-        self.subtotal = subtotal
-        self.total = total
+        self.subtotal = 0
+        self.total = 0
+    }
+    
+    func addPerson(person: Person) {
+        self.people.append(person)
     }
     
     func notifyPeople(ratio: Double) {

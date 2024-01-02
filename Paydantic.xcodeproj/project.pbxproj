@@ -119,6 +119,13 @@
 			path = PersonList;
 			sourceTree = "<group>";
 		};
+		0C10C1B72B44C947005A5B93 /* UploadReceipt */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadReceipt;
+			sourceTree = "<group>";
+		};
 		0CB62FDE2B3D3CE4006B54E3 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +149,7 @@
 		0CB62FE92B3D3CE4006B54E3 /* Paydantic */ = {
 			isa = PBXGroup;
 			children = (
+				0C10C1B72B44C947005A5B93 /* UploadReceipt */,
 				0C10C1B42B40B2C4005A5B93 /* PersonList */,
 				0C10C1AA2B40A272005A5B93 /* AddPerson */,
 				0C10C1932B3F5CB6005A5B93 /* Types */,

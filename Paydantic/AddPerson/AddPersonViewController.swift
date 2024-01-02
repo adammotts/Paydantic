@@ -11,6 +11,8 @@ class AddPersonViewController: UIViewController {
 
     var delegate: ViewController!
     
+    var index: Int!
+    
     //MARK: initializing the ADDExpenseView...
     let addPersonScreen = AddPersonView()
     
@@ -48,7 +50,7 @@ class AddPersonViewController: UIViewController {
         }
         
         let newPerson = Person(name: name, venmo: venmo)
-        delegate.delegateOnAddPerson(person: newPerson)
+        delegate.delegateOnAddPerson(person: newPerson, index: self.index)
         navigationController?.popViewController(animated: true)
     }
 }
