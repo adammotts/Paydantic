@@ -13,13 +13,9 @@ class ViewController: UIViewController {
     
     var peopleControllers = [AddPersonViewController]()
     
-    var bottomButton: UIButton!
-    
-    var bill = Bill()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Paydantic"
+        title = "List of People"
         
         personList.tableViewPerson.delegate = self
         personList.tableViewPerson.dataSource = self
@@ -30,27 +26,15 @@ class ViewController: UIViewController {
             action: #selector(onAddBarButtonTapped)
         )
         
-        setupBottomButton()
-        
-        initConstraints()
+        personList.bottomButton.addTarget(self, action: #selector(onBottomButtonTapped), for: .touchUpInside)
     }
     
     override func loadView() {
         view = personList
     }
     
-    func setupBottomButton() {
-        bottomButton = UIButton(type: .system)
-        bottomButton.setTitle("Next", for: .normal)
-        bottomButton.addTarget(self, action: #selector(onBottomButtonTapped), for: .touchUpInside)
-        bottomButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        // Add the button to the view
-        view.addSubview(bottomButton)
-    }
-    
     @objc func onBottomButtonTapped() {
-        print("Bottom Button Clicked")
+        print("Done Adding Items")
     }
     
     @objc func onAddBarButtonTapped(){
@@ -58,45 +42,36 @@ class ViewController: UIViewController {
         addPersonController.delegate = self
         addPersonController.index = peopleControllers.count
         self.peopleControllers.append(addPersonController)
-        self.bill.people.append(Person())
+        Bill.people.append(Person())
         navigationController?.pushViewController(addPersonController, animated: true)
     }
     
     //MARK: got the new person back and delegated to ViewController...
     func delegateOnAddPerson(person: Person, index: Int) {
-        self.bill.people[index] = person
+        Bill.people[index] = person
         personList.tableViewPerson.reloadData()
     }
     
     //MARK: remove a selected person
     func delegateOnRemovePerson(index: Int) {
-        self.bill.people.remove(at: index)
+        Bill.people.remove(at: index)
         self.peopleControllers.remove(at: index)
         personList.tableViewPerson.reloadData()
-    }
-    
-    func initConstraints() {
-        NSLayoutConstraint.activate([
-            bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bottomButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            bottomButton.heightAnchor.constraint(equalToConstant: 100) // Adjust the height as needed
-        ])
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.bill.people.count
+        return Bill.people.count
     }
     
     //MARK: controlling the view of each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "people", for: indexPath) as! PersonTableViewCell
         
-        cell.labelName.text = self.bill.people[indexPath.row].name
+        cell.labelName.text = Bill.people[indexPath.row].name
         var defaultValue = "N/A"
-        cell.labelVenmo.text = "Venmo: \(self.bill.people[indexPath.row].venmo ?? defaultValue)"
+        cell.labelVenmo.text = "Venmo: @\(Bill.people[indexPath.row].venmo ?? defaultValue)"
         
         return cell
     }

@@ -23,6 +23,7 @@ class AddPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Add Person"
 
         addPersonScreen.buttonAdd.addTarget(self, action: #selector(onAddButtonTapped), for: .touchUpInside)
     }

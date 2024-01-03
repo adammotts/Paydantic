@@ -15,6 +15,13 @@
 		0C10C1B02B40ABFB005A5B93 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1AF2B40ABFB005A5B93 /* PersonTableViewCell.swift */; };
 		0C10C1B32B40B284005A5B93 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1B22B40B284005A5B93 /* AddPersonViewController.swift */; };
 		0C10C1B62B40B33A005A5B93 /* AddPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1B52B40B33A005A5B93 /* AddPersonView.swift */; };
+		0C10C1B92B44CD10005A5B93 /* UploadReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1B82B44CD10005A5B93 /* UploadReceiptViewController.swift */; };
+		0C10C1BB2B44CD26005A5B93 /* UploadReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1BA2B44CD26005A5B93 /* UploadReceiptView.swift */; };
+		0C10C1BE2B4616C0005A5B93 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1BD2B4616C0005A5B93 /* AddItemViewController.swift */; };
+		0C10C1C02B4616EB005A5B93 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1BF2B4616EB005A5B93 /* AddItemView.swift */; };
+		0C10C1C32B4617FC005A5B93 /* ItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1C22B4617FC005A5B93 /* ItemListView.swift */; };
+		0C10C1C52B46181B005A5B93 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1C42B46181B005A5B93 /* ItemTableViewCell.swift */; };
+		0C10C1C72B461C51005A5B93 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1C62B461C51005A5B93 /* ItemListViewController.swift */; };
 		0CB62FEB2B3D3CE4006B54E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */; };
 		0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */; };
 		0CB62FF22B3D3CE4006B54E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB62FF02B3D3CE4006B54E3 /* Main.storyboard */; };
@@ -51,6 +58,13 @@
 		0C10C1AF2B40ABFB005A5B93 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		0C10C1B22B40B284005A5B93 /* AddPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
 		0C10C1B52B40B33A005A5B93 /* AddPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPersonView.swift; sourceTree = "<group>"; };
+		0C10C1B82B44CD10005A5B93 /* UploadReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadReceiptViewController.swift; sourceTree = "<group>"; };
+		0C10C1BA2B44CD26005A5B93 /* UploadReceiptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadReceiptView.swift; sourceTree = "<group>"; };
+		0C10C1BD2B4616C0005A5B93 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		0C10C1BF2B4616EB005A5B93 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		0C10C1C22B4617FC005A5B93 /* ItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListView.swift; sourceTree = "<group>"; };
+		0C10C1C42B46181B005A5B93 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		0C10C1C62B461C51005A5B93 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		0CB62FE72B3D3CE4006B54E3 /* Paydantic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paydantic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,8 +136,29 @@
 		0C10C1B72B44C947005A5B93 /* UploadReceipt */ = {
 			isa = PBXGroup;
 			children = (
+				0C10C1B82B44CD10005A5B93 /* UploadReceiptViewController.swift */,
+				0C10C1BA2B44CD26005A5B93 /* UploadReceiptView.swift */,
 			);
 			path = UploadReceipt;
+			sourceTree = "<group>";
+		};
+		0C10C1BC2B46166B005A5B93 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1BD2B4616C0005A5B93 /* AddItemViewController.swift */,
+				0C10C1BF2B4616EB005A5B93 /* AddItemView.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		0C10C1C12B4616F5005A5B93 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1C22B4617FC005A5B93 /* ItemListView.swift */,
+				0C10C1C42B46181B005A5B93 /* ItemTableViewCell.swift */,
+				0C10C1C62B461C51005A5B93 /* ItemListViewController.swift */,
+			);
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 		0CB62FDE2B3D3CE4006B54E3 = {
@@ -149,6 +184,8 @@
 		0CB62FE92B3D3CE4006B54E3 /* Paydantic */ = {
 			isa = PBXGroup;
 			children = (
+				0C10C1C12B4616F5005A5B93 /* ItemList */,
+				0C10C1BC2B46166B005A5B93 /* AddItem */,
 				0C10C1B72B44C947005A5B93 /* UploadReceipt */,
 				0C10C1B42B40B2C4005A5B93 /* PersonList */,
 				0C10C1AA2B40A272005A5B93 /* AddPerson */,
@@ -313,12 +350,19 @@
 			files = (
 				0C10C1AC2B40A31B005A5B93 /* ViewController.swift in Sources */,
 				0C10C1972B3F5EE1005A5B93 /* Person.swift in Sources */,
+				0C10C1C72B461C51005A5B93 /* ItemListViewController.swift in Sources */,
+				0C10C1BB2B44CD26005A5B93 /* UploadReceiptView.swift in Sources */,
 				0C10C1B32B40B284005A5B93 /* AddPersonViewController.swift in Sources */,
+				0C10C1C52B46181B005A5B93 /* ItemTableViewCell.swift in Sources */,
 				0C10C1AE2B40A3BD005A5B93 /* PersonListView.swift in Sources */,
+				0C10C1BE2B4616C0005A5B93 /* AddItemViewController.swift in Sources */,
 				0C10C1952B3F5D35005A5B93 /* Item.swift in Sources */,
 				0CB62FEB2B3D3CE4006B54E3 /* AppDelegate.swift in Sources */,
 				0C10C1A22B3F6991005A5B93 /* Bill.swift in Sources */,
+				0C10C1C02B4616EB005A5B93 /* AddItemView.swift in Sources */,
+				0C10C1C32B4617FC005A5B93 /* ItemListView.swift in Sources */,
 				0C10C1B62B40B33A005A5B93 /* AddPersonView.swift in Sources */,
+				0C10C1B92B44CD10005A5B93 /* UploadReceiptViewController.swift in Sources */,
 				0C10C1B02B40ABFB005A5B93 /* PersonTableViewCell.swift in Sources */,
 				0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */,
 			);

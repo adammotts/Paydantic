@@ -9,26 +9,22 @@ import Foundation
 
 class Bill {
     
-    var people: [Person]
-    var items: [Item]
-    var subtotal: Double
-    var total: Double
+    static var people = [Person]()
+    static var items = [Item]()
+    static var subtotal = 0.0
+    static var total = 0.0
     
     init() {
-        self.people = [Person]()
-        self.items = [Item]()
-        self.subtotal = 0
-        self.total = 0
     }
     
-    func addPerson(person: Person) {
-        self.people.append(person)
+    static func addPerson(person: Person) {
+        Bill.people.append(person)
     }
     
-    func notifyPeople(ratio: Double) {
-        var ratio = total / subtotal
+    static func notifyPeople() {
+        var ratio = Bill.total / Bill.subtotal
         
-        for person in people {
+        for person in Bill.people {
             person.computeTotal(ratio: ratio)
         }
     }
