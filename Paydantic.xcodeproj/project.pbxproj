@@ -24,6 +24,9 @@
 		0C10C1C72B461C51005A5B93 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1C62B461C51005A5B93 /* ItemListViewController.swift */; };
 		0C10C1CC2B46831A005A5B93 /* EnterTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1CB2B46831A005A5B93 /* EnterTotalViewController.swift */; };
 		0C10C1CE2B46832C005A5B93 /* EnterTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1CD2B46832C005A5B93 /* EnterTotalView.swift */; };
+		0C10C1DC2B4734F7005A5B93 /* CalculationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1DB2B4734F7005A5B93 /* CalculationsListViewController.swift */; };
+		0C10C1DE2B473559005A5B93 /* CalculationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1DD2B473559005A5B93 /* CalculationsListView.swift */; };
+		0C10C1E02B473568005A5B93 /* CalculationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C10C1DF2B473568005A5B93 /* CalculationsTableViewCell.swift */; };
 		0CB62FEB2B3D3CE4006B54E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */; };
 		0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */; };
 		0CB62FF22B3D3CE4006B54E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB62FF02B3D3CE4006B54E3 /* Main.storyboard */; };
@@ -69,6 +72,9 @@
 		0C10C1C62B461C51005A5B93 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		0C10C1CB2B46831A005A5B93 /* EnterTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterTotalViewController.swift; sourceTree = "<group>"; };
 		0C10C1CD2B46832C005A5B93 /* EnterTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterTotalView.swift; sourceTree = "<group>"; };
+		0C10C1DB2B4734F7005A5B93 /* CalculationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListViewController.swift; sourceTree = "<group>"; };
+		0C10C1DD2B473559005A5B93 /* CalculationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsListView.swift; sourceTree = "<group>"; };
+		0C10C1DF2B473568005A5B93 /* CalculationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationsTableViewCell.swift; sourceTree = "<group>"; };
 		0CB62FE72B3D3CE4006B54E3 /* Paydantic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Paydantic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB62FEA2B3D3CE4006B54E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CB62FEC2B3D3CE4006B54E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +180,16 @@
 			path = EnterTotal;
 			sourceTree = "<group>";
 		};
+		0C10C1D62B4734AA005A5B93 /* CalculationsList */ = {
+			isa = PBXGroup;
+			children = (
+				0C10C1DD2B473559005A5B93 /* CalculationsListView.swift */,
+				0C10C1DF2B473568005A5B93 /* CalculationsTableViewCell.swift */,
+				0C10C1DB2B4734F7005A5B93 /* CalculationsListViewController.swift */,
+			);
+			path = CalculationsList;
+			sourceTree = "<group>";
+		};
 		0CB62FDE2B3D3CE4006B54E3 = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +213,7 @@
 		0CB62FE92B3D3CE4006B54E3 /* Paydantic */ = {
 			isa = PBXGroup;
 			children = (
+				0C10C1D62B4734AA005A5B93 /* CalculationsList */,
 				0C10C1CA2B4682AA005A5B93 /* EnterTotal */,
 				0C10C1C12B4616F5005A5B93 /* ItemList */,
 				0C10C1BC2B46166B005A5B93 /* AddItem */,
@@ -363,11 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C10C1CE2B46832C005A5B93 /* EnterTotalView.swift in Sources */,
+				0C10C1E02B473568005A5B93 /* CalculationsTableViewCell.swift in Sources */,
 				0C10C1AC2B40A31B005A5B93 /* ViewController.swift in Sources */,
 				0C10C1972B3F5EE1005A5B93 /* Person.swift in Sources */,
 				0C10C1C72B461C51005A5B93 /* ItemListViewController.swift in Sources */,
 				0C10C1BB2B44CD26005A5B93 /* UploadReceiptView.swift in Sources */,
 				0C10C1B32B40B284005A5B93 /* AddPersonViewController.swift in Sources */,
+				0C10C1DE2B473559005A5B93 /* CalculationsListView.swift in Sources */,
 				0C10C1C52B46181B005A5B93 /* ItemTableViewCell.swift in Sources */,
 				0C10C1AE2B40A3BD005A5B93 /* PersonListView.swift in Sources */,
 				0C10C1BE2B4616C0005A5B93 /* AddItemViewController.swift in Sources */,
@@ -380,6 +399,7 @@
 				0C10C1B62B40B33A005A5B93 /* AddPersonView.swift in Sources */,
 				0C10C1B92B44CD10005A5B93 /* UploadReceiptViewController.swift in Sources */,
 				0C10C1B02B40ABFB005A5B93 /* PersonTableViewCell.swift in Sources */,
+				0C10C1DC2B4734F7005A5B93 /* CalculationsListViewController.swift in Sources */,
 				0CB62FED2B3D3CE4006B54E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

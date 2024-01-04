@@ -30,7 +30,17 @@ class EnterTotalViewController: UIViewController {
     }
     
     @objc func onNextButtonTapped() {
-        print("Next From Enter Total")
+        
+        if let str = enterTotalScreen.textFieldTotal.text, Double(str) != nil {
+            Bill.total = Double(str) ?? 0.0
+            Bill.notifyPeople()
+            
+            let calculationsListController = CalculationsListViewController()
+            navigationController?.pushViewController(calculationsListController, animated: true)
+            
+        } else {
+            return
+        }
     }
 
 }

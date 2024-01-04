@@ -27,11 +27,12 @@ class Person: Equatable, Hashable {
     }
     
     static func == (lhs: Person, rhs: Person) -> Bool {
-        return lhs.name == rhs.name // Comparison based on name or other unique properties
+        return lhs.name == rhs.name && lhs.venmo == rhs.venmo && lhs.total == rhs.total
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
         hasher.combine(venmo)
+        hasher.combine(total)
     }
 }
