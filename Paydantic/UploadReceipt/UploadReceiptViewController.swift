@@ -7,6 +7,8 @@
 
 import UIKit
 import PhotosUI
+import Vision
+import NaturalLanguage
 
 class UploadReceiptViewController: UIViewController {
     
@@ -14,7 +16,7 @@ class UploadReceiptViewController: UIViewController {
     var delegate: ViewController!
     
     //MARK: variable to store the picked Image...
-    var pickedImage:UIImage?
+    var pickedImage: UIImage?
     
     //MARK: initializing the ADDExpenseView...
     let uploadReceiptScreen = UploadReceiptView()
@@ -73,9 +75,92 @@ class UploadReceiptViewController: UIViewController {
     
     @objc func onNextButtonTapped() {
         let itemListController = ItemListViewController()
+        
+        if (pickedImage != nil) {
+            performOCR(on: pickedImage!, itemListController: itemListController)
+        }
+        
         navigationController?.pushViewController(itemListController, animated: true)
     }
 
+    func performOCR(on image: UIImage, itemListController: ItemListViewController) {
+        let request = VNRecognizeTextRequest { (request, error) in
+            guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+
+            let sortedObservations = observations.sorted { (obs1, obs2) -> Bool in
+                // Custom sorting logic: Compare y-coordinates first, then x-coordinates
+                if obs1.boundingBox.minY != obs2.boundingBox.minY {
+                    return obs1.boundingBox.minY > obs2.boundingBox.minY
+                }
+                return obs1.boundingBox.minX < obs2.boundingBox.minX
+            }
+
+            let recognizedText = sortedObservations.compactMap { $0.topCandidates(1).first?.string }
+            print(recognizedText)
+            
+            for index in recognizedText.indices[1...] {
+                var money = recognizedText[index]
+                var food = recognizedText[index - 1]
+                
+                if (self.isPotentiallyMoney(money) && self.isPotentiallyFood(food)) {
+                    print("\(food): \(money)")
+                    
+                    var moneyAmount = self.convertToMoney(money)
+                    
+                    Bill.items.append(Item(name: food, cost: moneyAmount))
+                    
+                    let addItemController = AddItemViewController()
+                    addItemController.delegate = itemListController
+                    addItemController.index = itemListController.itemControllers.count
+                    addItemController.addItemScreen.textFieldName.text = food
+                    addItemController.addItemScreen.textFieldCost.text = String(moneyAmount)
+                    itemListController.itemControllers.append(addItemController)
+                }
+            }
+        }
+        request.recognitionLevel = .accurate
+
+        guard let cgImage = image.cgImage else { return }
+        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        try? handler.perform([request])
+    }
+    
+    //Check if the string is a Double or starts with a $
+    func isPotentiallyMoney(_ input: String) -> Bool {
+        if input.hasPrefix("$") {
+            return true
+        }
+
+        if Double(input) != nil {
+            return true
+        }
+        
+        return false
+    }
+     
+    func isPotentiallyFood(_ input: String) -> Bool {
+        var moneyRelated: Set<String> = ["subtotal", "tax", "total", "cash", "change", "balance"]
+        
+        if (input.lowercased().split { !$0.isLetter }.contains { moneyRelated.contains(String($0)) }) {
+            return false
+        }
+        
+        if (isPotentiallyMoney(input)) {
+            return false
+        }
+        
+        return true
+    }
+    
+    func convertToMoney(_ input: String) -> Double {
+        var money = input
+        
+        if input.hasPrefix("$") {
+            money = String(input.dropFirst())
+        }
+        
+        return Double(money) ?? 0.0
+    }
 }
 
 //MARK: adopting required protocols for PHPicker...
