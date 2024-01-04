@@ -30,7 +30,7 @@ class AddPersonViewController: UIViewController {
     
     //MARK: action for tapping buttonAdd..
     @objc func onAddButtonTapped(){
-        var name: String?
+        var name: String = ""
         if let nameText = addPersonScreen.textFieldName.text {
             if !nameText.isEmpty {
                 name = nameText
@@ -40,7 +40,7 @@ class AddPersonViewController: UIViewController {
             }
         }
         
-        var venmo: String?
+        var venmo: String = ""
         if let venmoText = addPersonScreen.textFieldVenmo.text {
             if !venmoText.isEmpty {
                 venmo = venmoText

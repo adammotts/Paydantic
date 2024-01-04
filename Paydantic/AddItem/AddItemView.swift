@@ -11,6 +11,7 @@ class AddItemView: UIView {
 
     var textFieldName: UITextField!
     var textFieldCost: UITextField!
+    var buttonSelectPeople: UIButton!
     
     var buttonAdd: UIButton!
 
@@ -20,6 +21,7 @@ class AddItemView: UIView {
         
         setupTextFieldName()
         setupTextFieldCost()
+        setupButtonSelectPeople()
         setupButtonAdd()
         
         initConstraints()
@@ -40,6 +42,14 @@ class AddItemView: UIView {
         self.addSubview(textFieldCost)
     }
     
+    func setupButtonSelectPeople(){
+        buttonSelectPeople = UIButton(type: .system)
+        buttonSelectPeople.setTitle("Select People", for: .normal)
+        buttonSelectPeople.showsMenuAsPrimaryAction = true
+        buttonSelectPeople.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(buttonSelectPeople)
+    }
+    
     func setupButtonAdd(){
         buttonAdd = UIButton(type: .system)
         buttonAdd.setTitle("Save Item", for: .normal)
@@ -56,7 +66,10 @@ class AddItemView: UIView {
             textFieldCost.topAnchor.constraint(equalTo: textFieldName.bottomAnchor, constant: 16),
             textFieldCost.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
             
-            buttonAdd.topAnchor.constraint(equalTo: textFieldCost.bottomAnchor, constant: 16),
+            buttonSelectPeople.topAnchor.constraint(equalTo: textFieldCost.bottomAnchor, constant: 16),
+            buttonSelectPeople.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
+            
+            buttonAdd.topAnchor.constraint(equalTo: buttonSelectPeople.bottomAnchor, constant: 16),
             buttonAdd.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),
         ])
     }

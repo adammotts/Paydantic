@@ -34,7 +34,8 @@ class ViewController: UIViewController {
     }
     
     @objc func onBottomButtonTapped() {
-        print("Done Adding Items")
+        let uploadReceiptController = UploadReceiptViewController()
+        navigationController?.pushViewController(uploadReceiptController, animated: true)
     }
     
     @objc func onAddBarButtonTapped(){
@@ -70,8 +71,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "people", for: indexPath) as! PersonTableViewCell
         
         cell.labelName.text = Bill.people[indexPath.row].name
-        var defaultValue = "N/A"
-        cell.labelVenmo.text = "Venmo: @\(Bill.people[indexPath.row].venmo ?? defaultValue)"
+        cell.labelVenmo.text = "Venmo: @\(Bill.people[indexPath.row].venmo)"
         
         return cell
     }

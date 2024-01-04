@@ -34,8 +34,7 @@ class ItemListViewController: UIViewController {
     }
     
     @objc func onBottomButtonTapped() {
-        let uploadReceiptController = UploadReceiptViewController()
-        navigationController?.pushViewController(uploadReceiptController, animated: true)
+        print("Done Adding Items")
     }
     
     @objc func onAddBarButtonTapped(){
@@ -71,8 +70,14 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "items", for: indexPath) as! ItemTableViewCell
         
         cell.labelName.text = Bill.items[indexPath.row].name
-        var defaultValue = 0.0
-        cell.labelCost.text = "Cost: $\(Bill.items[indexPath.row].cost ?? defaultValue)"
+        
+        var cost = String(format: "%.2f", Bill.items[indexPath.row].cost)
+        
+        cell.labelCost.text = "Cost: $\(cost)"
+        
+        var consumers = Bill.items[indexPath.row].consumers.map { $0.name }.joined(separator: ", ")
+        
+        cell.labelConsumers.text = "Consumed By: \(consumers)"
         
         return cell
     }
