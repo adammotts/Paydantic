@@ -26,21 +26,24 @@ class AddPersonView: UIView {
     }
     
     //MARK: methods to initialize the UI elements...
-    func setupTextFieldName(){
+    func setupTextFieldName() {
         textFieldName = UITextField()
         textFieldName.placeholder = "Enter Name"
+        textFieldName.textAlignment = .center
         textFieldName.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldName)
     }
     
-    func setupTextFieldVenmo(){
+    func setupTextFieldVenmo() {
         textFieldVenmo = UITextField()
         textFieldVenmo.placeholder = "Enter Venmo"
+        textFieldVenmo.textAlignment = .center
+        textFieldVenmo.autocapitalizationType = .none
         textFieldVenmo.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldVenmo)
     }
     
-    func setupButtonAdd(){
+    func setupButtonAdd() {
         buttonAdd = UIButton(type: .system)
         buttonAdd.setTitle("Save Person", for: .normal)
         buttonAdd.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +51,7 @@ class AddPersonView: UIView {
     }
     
     //MARK: initialize the constraints...
-    func initConstraints(){
+    func initConstraints() {
         NSLayoutConstraint.activate([
             textFieldName.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
             textFieldName.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),

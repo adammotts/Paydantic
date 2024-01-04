@@ -17,13 +17,13 @@ class UploadReceiptView: UIView {
         super.init(frame: frame)
         backgroundColor = .white
         
-        setupbuttonTakePhoto()
-        setupbuttonAdd()
+        setupButtonTakePhoto()
+        setupButtonAdd()
         
         initConstraints()
     }
     
-    func setupbuttonTakePhoto(){
+    func setupButtonTakePhoto() {
         buttonTakePhoto = UIButton(type: .system)
         buttonTakePhoto.setTitle("", for: .normal)
         buttonTakePhoto.setImage(UIImage(systemName: "camera.fill"), for: .normal)
@@ -36,14 +36,14 @@ class UploadReceiptView: UIView {
         self.addSubview(buttonTakePhoto)
     }
     
-    func setupbuttonAdd(){
+    func setupButtonAdd() {
         buttonAdd = UIButton(type: .system)
         buttonAdd.setTitle("Skip", for: .normal)
         buttonAdd.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(buttonAdd)
     }
     
-    func initConstraints(){
+    func initConstraints() {
         NSLayoutConstraint.activate([
             buttonTakePhoto.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 32),
             buttonTakePhoto.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor),

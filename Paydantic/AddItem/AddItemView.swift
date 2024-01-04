@@ -31,6 +31,7 @@ class AddItemView: UIView {
     func setupTextFieldName(){
         textFieldName = UITextField()
         textFieldName.placeholder = "Enter Name"
+        textFieldName.textAlignment = .center
         textFieldName.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldName)
     }
@@ -38,6 +39,7 @@ class AddItemView: UIView {
     func setupTextFieldCost(){
         textFieldCost = UITextField()
         textFieldCost.placeholder = "Enter Cost"
+        textFieldCost.textAlignment = .center
         textFieldCost.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(textFieldCost)
     }

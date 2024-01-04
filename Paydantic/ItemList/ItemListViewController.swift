@@ -34,7 +34,8 @@ class ItemListViewController: UIViewController {
     }
     
     @objc func onBottomButtonTapped() {
-        print("Done Adding Items")
+        let enterTotalController = EnterTotalViewController()
+        navigationController?.pushViewController(enterTotalController, animated: true)
     }
     
     @objc func onAddBarButtonTapped(){
